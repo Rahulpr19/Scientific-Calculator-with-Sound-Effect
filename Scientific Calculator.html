@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <div class="container main">
+        <h1 class="header">Calculate Me</h1>
+        <div class="display">
+            <input type="text" id="screen" placeholder="00" readonly>
+        </div>
+        <div class="sound">
+            <audio id="myAudio">
+                <source src="Click-one.wav" type="audio/mpeg">
+            </audio>
+        </div>
+        <div class="btn">
+            <div class="row">
+                <button onclick="clearResult(), playAudio()">C</button>
+                <button onclick="deleteLast(), playAudio()">Del.</button>
+                <button onclick="addToResult('+') , playAudio()">+</button>
+                <button onclick="addToResult('-') , playAudio()">-</button>
+                <button onclick="insertFunction('abs') , playAudio()">abs</button>
+                <button onclick="addToResult('<') , playAudio()"><</button>
+                <button onclick="addToResult('}') , playAudio()">}</button>
+            </div>
+            <div class="row">
+                <button onclick="addToResult('1') , playAudio()">1</button>
+                <button onclick="addToResult('2') , playAudio()">2</button>
+                <button onclick="addToResult('3') , playAudio()">3</button>
+                <button onclick="addToResult('*') , playAudio()">*</button>
+                <button onclick="addToResult('(') , playAudio()">(</button>
+                <button onclick="addToResult(')') , playAudio()">)</button>
+                <button onclick="addToResult('>') , playAudio()">></button>
+            </div>
+            <div class="row">
+                <button onclick="addToResult('4') , playAudio()">4</button>
+                <button onclick="addToResult('5') , playAudio()">5</button>
+                <button onclick="addToResult('6') , playAudio()">6</button>
+                <button onclick="addToResult('/') , playAudio()">/</button>
+                <button onclick="insertFunction('Math.sqrt') , playAudio()">sqrt</button>
+                <button onclick="insertFunction('Math.sin') , playAudio()">sin</button>
+                <button onclick="pi() , playAudio()">π</button>
+            </div>
+            <div class="row">
+                <button onclick="addToResult('7') , playAudio()">7</button>
+                <button onclick="addToResult('8') , playAudio()">8</button>
+                <button onclick="addToResult('9') , playAudio()">9</button>
+                <button onclick="addToResult('%') , playAudio()">%</button>
+                <button onclick="insertFunction('Math.cos') , playAudio()">cos</button>
+                <button onclick="insertFunction('Math.tan') , playAudio()">tan</button>
+                <button onclick="insertFunction('x^y') , playAudio()">x^y</button>
+            </div>
+            <div class="row">
+                <button onclick="addToResult('0') , playAudio()">0</button>
+                <button onclick="addToResult('00') , playAudio()">00</button>
+                <button onclick="addToResult('.') , playAudio()">.</button>
+                <button onclick="calculateResult() , playAudio()">=</button>
+                <button onclick="insertFunction('Math.log') , playAudio()">log</button>
+                <button onclick="insertFunction('Math.exp') , playAudio()">exp</button>
+                <button onclick="addToResult('_') , playAudio()">_</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="Script.js"></script>
+</html>
